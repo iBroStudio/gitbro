@@ -20,6 +20,10 @@ class AppServiceProvider extends ServiceProvider
             ? app(Xdg::class)->getHomeConfigDirectory().'/gitbro/'
             : base_path('playground').'/gitbro/';
 
+        Config::set('logging.channels.single.path', \Phar::running()
+            ? dirname(\Phar::running(false)) . $homeConfigDirectory . 'gitbro.log'
+            : storage_path('logs/gitbro.log'));
+
         Config::set('app.homeConfigDirectory', $homeConfigDirectory);
 
         Config::set('app.workingDirectory',
