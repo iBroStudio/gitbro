@@ -1,7 +1,14 @@
 {
     "name": "ibrostudio/gitbro",
     "description": "Cli app to manage Git repositories and facilitate releases management",
-    "keywords": ["git", "github", "repositories", "release", "laravel", "packages"],
+    "keywords": [
+        "git",
+        "github",
+        "repositories",
+        "release",
+        "laravel",
+        "packages"
+    ],
     "homepage": "https://github.com/iBroStudio/gitbro",
     "type": "project",
     "license": "MIT",
@@ -60,5 +67,8 @@
     },
     "minimum-stability": "stable",
     "prefer-stable": true,
-    "bin": ["builds/gitbro"]
+    "bin": [
+        "builds/gitbro"
+    ],
+    "version": "1.1.1"
 }
