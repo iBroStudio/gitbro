@@ -2769,16 +2769,16 @@
         },
         {
             "name": "ibrostudio/laravel-git",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/iBroStudio/laravel-git.git",
-                "reference": "ba47fcfce62befc8525b37d42bfa6e03d6205c93"
+                "reference": "659258b571eb06178f91132049359cf76fb968ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/iBroStudio/laravel-git/zipball/ba47fcfce62befc8525b37d42bfa6e03d6205c93",
-                "reference": "ba47fcfce62befc8525b37d42bfa6e03d6205c93",
+                "url": "https://api.github.com/repos/iBroStudio/laravel-git/zipball/659258b571eb06178f91132049359cf76fb968ec",
+                "reference": "659258b571eb06178f91132049359cf76fb968ec",
                 "shasum": ""
             },
             "require": {
@@ -2836,9 +2836,9 @@
             ],
             "support": {
                 "issues": "https://github.com/iBroStudio/laravel-git/issues",
-                "source": "https://github.com/iBroStudio/laravel-git/tree/v1.1.0"
+                "source": "https://github.com/iBroStudio/laravel-git/tree/v1.1.1"
             },
-            "time": "2024-10-02T13:57:39+00:00"
+            "time": "2024-10-02T16:18:40+00:00"
         },
         {
             "name": "ibrostudio/laravel-neon-config",
