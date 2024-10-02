@@ -1,13 +1,13 @@
 {
-    "name": "ibrostudio/laravel-packages-git-tools",
-    "description": "The Laravel Zero Framework.",
-    "keywords": ["laravel", "packages", "git"],
-    "homepage": "https://laravel-zero.com",
+    "name": "ibrostudio/gitbro",
+    "description": "Cli app to manage Git repositories and facilitate releases management",
+    "keywords": ["git", "github", "repositories", "release", "laravel", "packages"],
+    "homepage": "https://github.com/iBroStudio/gitbro",
     "type": "project",
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/laravel-zero/laravel-zero/issues",
-        "source": "https://github.com/laravel-zero/laravel-zero"
+        "issues": "https://github.com/iBroStudio/gitbro/issues",
+        "source": "https://github.com/iBroStudio/gitbro"
     },
     "authors": [
         {
@@ -17,7 +17,6 @@
     ],
     "require": {
         "php": "^8.2.0"
-
     },
     "require-dev": {
         "ajthinking/archetype": "^2.0",

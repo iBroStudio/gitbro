@@ -1,34 +1,66 @@
-<p align="center">
-    <img title="Laravel Zero" height="100" src="https://raw.githubusercontent.com/laravel-zero/docs/master/images/logo/laravel-zero-readme.png" alt="Laravel Zero Logo" />
-</p>
+# Gitbro
 
-<p align="center">
-  <a href="https://github.com/laravel-zero/framework/actions"><img src="https://github.com/laravel-zero/laravel-zero/actions/workflows/tests.yml/badge.svg" alt="Build Status" /></a>
-  <a href="https://packagist.org/packages/laravel-zero/framework"><img src="https://img.shields.io/packagist/dt/laravel-zero/framework.svg" alt="Total Downloads" /></a>
-  <a href="https://packagist.org/packages/laravel-zero/framework"><img src="https://img.shields.io/packagist/v/laravel-zero/framework.svg?label=stable" alt="Latest Stable Version" /></a>
-  <a href="https://packagist.org/packages/laravel-zero/framework"><img src="https://img.shields.io/packagist/l/laravel-zero/framework.svg" alt="License" /></a>
-</p>
+## Installation
+```bash
+composer global require ibrostudio/gitbro
+```
 
-Laravel Zero was created by [Nuno Maduro](https://github.com/nunomaduro) and [Owen Voke](https://github.com/owenvoke), and is a micro-framework that provides an elegant starting point for your console application. It is an **unofficial** and customized version of Laravel optimized for building command-line applications.
+## Configuration
+To communicate with Github, you need to register in the config a [Github Personal Access Token](https://github.com/settings/tokens):
+```bash
+gitbro config
+```
 
-- Built on top of the [Laravel](https://laravel.com) components.
-- Optional installation of Laravel [Eloquent](https://laravel-zero.com/docs/database/), Laravel [Logging](https://laravel-zero.com/docs/logging/) and many others.
-- Supports interactive [menus](https://laravel-zero.com/docs/build-interactive-menus/) and [desktop notifications](https://laravel-zero.com/docs/send-desktop-notifications/) on Linux, Windows & MacOS.
-- Ships with a [Scheduler](https://laravel-zero.com/docs/task-scheduling/) and  a [Standalone Compiler](https://laravel-zero.com/docs/build-a-standalone-application/).
-- Integration with [Collision](https://github.com/nunomaduro/collision) - Beautiful error reporting
+## Init a new project
+```bash
+gitbro init
+```
+This will create a new Github repository, following your parameters, as visibility or ownership, and then clone it locally.
 
-------
+### Using templates repositories
+You can use a template for your project. By default, [Spatie Package Skeleton Laravel](https://github.com/spatie/package-skeleton-laravel) and [Filament PHP Plugin Skeleton](https://github.com/filamentphp/plugin-skeleton) are available, but you can add more using the following command:
+```bash
+gitbro template
+```
 
-## Documentation
+## Conventional Commits
+This app follows the [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/).
+A commit type will prefix your message to help history comprehension and will be used by the CHANGELOG generator.
+```bash
+gitbro commit
+```
 
-For full documentation, visit [laravel-zero.com](https://laravel-zero.com/).
+### Running scripts before commit
+You can automatically run tests or format code scripts before each commit:
 
-## Support the development
-**Do you like this project? Support it by donating**
+Create a `gitbro.neon` file at the root of your project with:
+```neon
+scripts:
+    format-code:
+        - 'vendor/bin/pint'
+        - 'npx prettier . --write'
+    test-code:
+        - 'composer test'
+```
 
-- PayPal: [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=66BYDWAT92N6L)
-- Patreon: [Donate](https://www.patreon.com/nunomaduro)
+## Pull, push, sync
+- `gibro pull` for ***git pull origin main --rebase***
+- `gibro push` for ***git push origin main***
+- `gibro sync` will execute ***gitbro pull*** and then ***gitbro push***
 
-## License
+## Releases
+You can easily perform a release creation by running:
+```bash
+gitbro release
+```
+This will:
+- define the version, following the [semantic versionning](https://semver.org/)
+- bump the new version in composer.json and/or package.json if used
+- generate a note section in your CHANGELOG
+- create the release on Github
 
-Laravel Zero is an open-source software licensed under the MIT license.
+## Testing
+
+```bash
+composer test
+```
