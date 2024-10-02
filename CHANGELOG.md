@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
  
+## [1.1.1](https://github.com/iBroStudio/gitbro/compare/v1.1.0...HEAD) (2024-10-02)
+### Bug Fixes
+* init tasks reactivated ([ddfd5a](https://github.com/iBroStudio/gitbro/commit/ddfd5a2faa822851003d53af22abc517fcb4f86a))
+
+---
+
 ## [1.1.0](https://github.com/iBroStudio/gitbro/compare/v1.0.0...v1.1.0) (2024-10-02)
 ### Bug Fixes
 * change log directory in production mode ([44b6ae](https://github.com/iBroStudio/gitbro/commit/44b6ae7173d94ead4e7b98d84392e8cf4f5e54ba))
