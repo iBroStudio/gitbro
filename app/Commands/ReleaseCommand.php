@@ -68,7 +68,7 @@ class ReleaseCommand extends AbstractGitbroCommand
             );
 
             if ($process->getRepository() instanceof GitRepository) {
-                info('Repository successfully created!');
+                info('Release successfully created!');
 
                 return self::SUCCESS;
             }
